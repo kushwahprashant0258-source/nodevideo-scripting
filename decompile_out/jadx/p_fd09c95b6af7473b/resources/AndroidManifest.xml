@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="622"
+    android:versionName="7.7.1"
+    android:installLocation="preferExternal"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.shallwaystudio.nodevideo"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:glEsVersion="0x30000"/>
+    <uses-feature
+        android:name="android.hardware.vulkan.version"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.distinct"
+        android:required="false"/>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon"
+        android:extractNativeLibs="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:enableOnBackInvokedCallback="false">
+        <meta-data
+            android:name="unity.splash-mode"
+            android:value="0"/>
+        <meta-data
+            android:name="unity.splash-enable"
+            android:value="true"/>
+        <meta-data
+            android:name="unity.launch-fullscreen"
+            android:value="true"/>
+        <meta-data
+            android:name="unity.render-outside-safearea"
+            android:value="false"/>
+        <meta-data
+            android:name="unity.auto-report-fully-drawn"
+            android:value="true"/>
+        <meta-data
+            android:name="unity.auto-set-game-state"
+            android:value="true"/>
+        <meta-data
+            android:name="unity.strip-engine-code"
+            android:value="true"/>
+        <activity
+            android:theme="@style/UnityThemeSelector"
+            android:name="com.shallwaystudio.nodevideo.NodeVideoScriptActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen|locale|mnc|mcc"
+            android:hardwareAccelerated="true"
+            android:resizeableActivity="false">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data
+                android:name="unityplayer.UnityActivity"
+                android:value="true"/>
+            <meta-data
+                android:name="unityplayer.SkipPermissionsDialog"
+                android:value="true"/>
+        </activity>
+        <activity
+            android:name="com.shallwaystudio.nodevideo.NodeVideoScriptEditorActivity"
+            android:exported="false"
+            android:screenOrientation="fullUser"/>
+        <activity android:name="com.shallwaystudio.nodevideo.wxapi.ZFBActivity"/>
+        <activity
+            android:name="com.shallwaystudio.nodevideo.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.shallwaystudio.nodevideo.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:taskAffinity="com.shallwaystudio.nodevideo"
+            android:launchMode="singleTask"/>
+        <service
+            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+            android:enabled="false"
+            android:exported="true">
+            <meta-data
+                android:name="com.google.android.play.core.assetpacks.versionCode"
+                android:value="20100"/>
+        </service>
+        <service
+            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+            android:enabled="false"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+        <provider
+            android:name="com.yasirkula.unity.NativeShareContentProvider"
+            android:exported="false"
+            android:authorities="com.shallwaystudio.nodevideo.NativeShareContentProvider"
+            android:grantUriPermissions="true"/>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="6.2.1"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct"/>
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false"/>
+    </application>
+</manifest>

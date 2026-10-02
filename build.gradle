@@ -1,0 +1,7 @@
+plugins {
+    id 'base'
+}
+
+tasks.register("buildRelease", Exec) {
+    commandLine "bash", "${rootDir}/scripts/build_apk.sh"
+}

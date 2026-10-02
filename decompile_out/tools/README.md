@@ -1,0 +1,1 @@
+Tools for inspecting the bundled IL2CPP metadata during the scripting bridge build.\n

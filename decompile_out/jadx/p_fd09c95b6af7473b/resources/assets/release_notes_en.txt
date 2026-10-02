@@ -1,0 +1,140 @@
+1
+7.7.1
+Based on your feedback, this update brings the following improvements:
+- Optical Flow – Motion Blur now automatically performs frame interpolation before applying motion blur.
+- Optical Flow – Motion Blur adds a new Direction parameter.
+We’ve started development on version 8.0, so updates may come less frequently in the next few months. Thank you for your support!
+--------------------------------------
+7.7.0
+- Shake upgrade! Try the new [Add Property - Effect - Shake & Twitch]
+- Pixel Sort now supports Angle adjustment
+- [Transform], [Squeeze], and others add a new [Border] parameter to precisely mirror texture edges
+- [Bend] adds a new Transform parameter
+- Other fixes and improvements
+--------------------------------------
+7.6.6
+- New effect: [Asset Store - Distort - Tunnel]
+- Projects containing copyright information cannot save presets
+- Other fixes and improvements
+--------------------------------------
+7.6.5
+Based on user feedback:
+- Motion blur has been changed to a backward trailing effect for a more natural look
+- Other optimizations to reduce crashes
+--------------------------------------
+7.6.4
+Optical Flow Update 9.1:
+- Motion Blur now supports GPU Acceleration
+- Improved Motion Blur quality
+- Improved Frame Mix options.
+--------------------------------------
+7.6.2
+Based on user feedback, fixed a crash issue when applying motion blur to long videos.
+--------------------------------------
+Try the new Optical Flow 9.0!
+- Better Frame Mix
+- Stronger Motion Blur
+- Simpler Controls
+--------------------------------------
+7.5.2
+Based on user feedback, this update brings the following improvements:
+- Added a new effect: [New Property - Asset Store - Distort - Split]
+- Changing keyframe positions no longer alters the shape of custom curves
+- Other bug fixes and improvements
+--------------------------------------
+7.5.1
+Based on user feedback, this update brings the following improvements:
+- The [Glow] effect now includes the [Preserve Alpha] option again, which helps resolve some compatibility issues.
+- The [Audio Spectrum] effect has a new [Interlace] option for creating more visual variations.
+- The [Skew] effect now includes a [Texture Wrap] option that allows edge mirroring.
+--------------------------------------
+7.5.0
+- Major upgrade! The Glow effect no longer affects transparent backgrounds — now you can apply glow to text, PNG images, and more!
+- Added [Asset Store - Distort - Path Mirror], which can be used to create a whirlpool effect
+- Fixed the issue with black occlusion in the [3D - Cylinder] model. It can now be used to create paper curling effects!
+- Fixed an issue where some imported HDR videos appeared distorted
+--------------------------------------
+7.4.1
+Based on user feedback, this update includes the following improvements:
+1. Paint
+- Added [Eraser] tool to [Shape - Paint]
+2. Text Animation
+- The Wiggle effect now supports a Random type
+- Added a new Pulse type for Interpolation
+- Fixed an issue where the Random Text animation didn’t work properly
+--------------------------------------
+7.4.0
+- Render millions of particles on your phone! New effect added: [New Property - Effect - 3D - Ball Action]
+- Some UI improvements
+--------------------------------------
+7.3.1
+- Improved popular effects: "Raindrop"。
+- Fixed a bug where audio would briefly repeat during project playback。
+- Fixed an occasional black screen issue when entering a project。
+- Other bug fixes and improvements
+--------------------------------------
+7.3.0
+- You can now import and export backup data from the Settings page.
+- New effect added: [New property - 2D Animation - Move Along Path].
+--------------------------------------
+7.2.3
+- Fixed an issue where images could not be imported on certain devices running Android 13.
+- Fixed a bug where custom filters sometimes failed to import.
+--------------------------------------
+7.2.2
+- Improved [Effect - Audio Spectrum] by adding a [Speed Setting], allowing for smoother spectrum transitions
+- Fixed an issue where [Glass Blur] was not functioning properly
+--------------------------------------
+7.2.0
+This update focuses mainly on optimizations for other platforms.
+In addition, the following bugs have been fixed:
+- Fixed an issue where GLTF model packages couldn't be opened after saving the project.
+- Fixed a bug that occasionally caused project loss after a crash.
+--------------------------------------
+7.1.6
+Improvements:
+- Enhanced the clarity under the [Frame Interpolation - Optical Flow - HD] option
+- Improved the clarity of [Optical Flow - Motion Blur]
+Bug Fixes:
+- Fixed a black screen issue caused by using [SpeedRamp]
+- Other device compatibility fixes
+--------------------------------------
+7.1.3
+3D camera tracking now supports [Masking], which can significantly improve accuracy in certain scenarios.
+--------------------------------------
+7.1.0
+New:
+- [New Property - 2D Animation - Mesh Warp]
+Fixes:
+- Fixed the issue where path keyframes were disordered.
+- Fixed the issue where the Reflection parameter under Material affected transparency.
+- Other bug fixes and improvements.
+--------------------------------------
+7.0.7
+- You can now protect your project by going to [App Home > Project Menu > Add Copyright Info].
+- 3D model import now supports the .gltf format, allowing direct import of models from the popular 3D model website Sketchfab.
+--------------------------------------
+7.0.6
+- Added new camera model: [New Layer - 3D - Asset Store - Camera]
+- Added nearly 30 new particles: [New Layer - 3D - Asset Store - Particles (Nature)]
+- Fixed the issue with transparent edges in Puppet Tool that caused image cutout.
+--------------------------------------
+7.0.4
+We have fully upgraded our engine and developed a new AI framework. This update brings the following improvements:
+- Industry-leading video matting feature : [New Property - AI - Smart Matting]
+- Smoother user experience
+- Fixes for numerous known issues
+- A new "Development Plan" section in the feedback interface – We welcome your suggestions!
+--------------------------------------
+Version 6.70.1
+Fixed the bug where video exports sometimes became blurry (even though 1080P was selected, the output was in 720P quality).
+--------------------------------------
+Version 6.70.0
+The color range of the encoder has been standardized to [TV], and the color space is set to [BT.709].
+This resolves the minor color discrepancies observed after video export.
+--------------------------------------
+Version 6.64.0
+Improved [Layer Styles]:
+1. Added a new [Glass] style.
+2. Enhanced the [Shadow] effect.
+3. Refined the [Bevel] effect.
